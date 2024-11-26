@@ -1,11 +1,11 @@
-export default function cleanSet(set, startString) {
+export default function cleanSet(set, startString = '') {
   const candidates = [];
 
-  if (startString === '') {
+  if (startString === '' || typeof startString !== 'string') {
     return '';
   }
   set.forEach((elm) => {
-    if (elm.startsWith(startString)) {
+    if (elm && elm.startsWith(startString)) {
       candidates.push(elm.substring(startString.length));
     }
   });
