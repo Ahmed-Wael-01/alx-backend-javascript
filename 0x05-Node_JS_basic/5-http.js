@@ -45,7 +45,7 @@ const app = http.createServer((req, res) => {
     case '/students':
       countStudents(process.argv[2])
         .then((txt) => {
-          res.write('This is the list of our students');
+          res.write('This is the list of our students\n');
           res.write(txt);
           res.end();
         });
