@@ -14,3 +14,5 @@ app.listen(port, (err) => {
     console.log('error: ', err);
   }
 });
+
+module.exports = app;
