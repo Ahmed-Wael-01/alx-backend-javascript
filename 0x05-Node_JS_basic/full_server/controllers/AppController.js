@@ -1,6 +1,6 @@
-class appController{
+class appController {
   static getHomepage(request, response) {
-    response.status(200).json('Hello ALX!')
+    response.status(200).send('Hello ALX!');
   }
 }
 
