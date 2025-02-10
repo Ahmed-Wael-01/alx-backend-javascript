@@ -36,16 +36,17 @@ class StudentsController{
       response.status(500).send('Major parameter must be CS or SWE');
       return;
     }
-    realDatabase(path).then((studentGroups) => {
+    readDatabase(path).then((studentGroups) => {
+      let text = '';
       if (Object.keys(studentGroups).includes(major)) {
         const group = studentGroups[major];
-        const text = `List: ${group.map((student) => student.firstname).join(', ')}`;
+        text = `List: ${group.map((student) => student.firstname).join(', ')}`;
       }
       else {
-        const text = '';
+        text = '';
       }
       response.status(200).send(text);
-    }).catvh((err) => {
+    }).catch((err) => {
       response.status(500)
               .send(err instanceof Error ? err.message : err.toString());
     })

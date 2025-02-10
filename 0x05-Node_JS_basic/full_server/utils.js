@@ -33,4 +33,4 @@ const readDatabase = (dataPath) => new Promise((resolve, reject) => {
   });
 });
 
-module.exports = realDatabase;
+module.exports = readDatabase;

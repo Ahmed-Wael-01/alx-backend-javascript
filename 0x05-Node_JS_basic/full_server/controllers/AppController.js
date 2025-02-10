@@ -1,5 +1,5 @@
 class appController{
-  static getHome(request, response) {
+  static getHomepage(request, response) {
     response.status(200).json('Hello ALX!')
   }
 }

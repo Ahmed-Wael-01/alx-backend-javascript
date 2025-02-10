@@ -5,7 +5,7 @@ const express = require("express");
 const router = express.Router();
 
 router.get('/', AppController.getHomepage);
-router.get('/students', studentsController.getAllStudents);
-router.get('/students/:major', studentsController.getAllStudentsByMajor);
+router.get('/students', StudentsController.getAllStudents);
+router.get('/students/:major', StudentsController.getAllStudentsByMajor);
 
 module.exports = router;
